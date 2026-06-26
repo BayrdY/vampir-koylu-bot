@@ -690,7 +690,7 @@ async function createVotingMessage() {
         );
 
         const embed = getVotingEmbed();
-        const msg = await gameVoice.send({ content: '@here', embeds: [embed], components: [row] });
+        const msg = await gameVoice.send({ embeds: [embed], components: [row] });
         votingMessageId = msg.id;
     } catch(e) {}
 }
